@@ -1,0 +1,105 @@
+body {
+	font: 15px/1.5 sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #edfcf8;
+}
+
+/* Global shit*/
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+
+/* Header */
+
+
+header {
+	background: #2A8285;
+	color: #FFFFFF;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #B83027 3px solid;
+}
+
+
+/* Links */
+
+header a{
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header ul{
+	margin: 0;
+	padding: 0;
+}
+
+header li{
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #jesus{
+	float:left;
+}
+
+header #jesus h1{
+	margin:0;
+	font: 40px 'Vibur', cursive;
+}
+
+header nav{
+	float:right;
+	margin-top:10px;
+}
+
+header .highlight, header .current a{
+	color: #B83027;
+	font-weight: bold;
+}
+
+header a:hover{
+	color:#cccccc;
+	font-weight: bold;
+}
+
+
+/* Title of article */
+
+#text h1 {
+  font: 60px/1.0 'Bubbler One',sans-serif;
+  font-style:italic;
+  border-bottom: 3px solid black;
+  margin:20px 500px 0 0;
+  padding:0;
+  width: 500px;
+
+}
+
+#text img{
+  display:block;
+  width:95px;
+  margin: -70px 0 0 420px;
+}
+
+#text p{
+  text-transform: uppercase;
+}
+
+#text ul{
+  
+}
+footer{
+	padding:20px;
+	margin-top:20px;
+	color:#FFFFFF;
+	background-color:#2A8285;
+	text-align: center;
+}
