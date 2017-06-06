@@ -115,9 +115,17 @@ header a:hover{
 }
 
 footer{
+	position:absolute;
+	bottom:auto;
+	width:100%;
 	padding:20px;
-	margin-top:20px;
-	color:#FFFFFF;
+	margin: 0;
 	background-color:#2A8285;
 	text-align: center;
+	clear:both;
+}
+
+footer p{
+	color:#ffffff;
+	margin-top: 10px;
 }

@@ -74,10 +74,10 @@ header a:hover{
 /* Title of article */
 
 #text h1 {
-  font: 60px/1.0 'Bubbler One',sans-serif;
+	font: 60px/1.0 'Bubbler One',sans-serif;
   font-style:italic;
   border-bottom: 3px solid black;
-  margin:20px 500px 0 0;
+  margin:30px 500px 0 0;
   padding:0;
   width: 500px;
 
@@ -94,12 +94,23 @@ header a:hover{
 }
 
 #text ul{
-  
+  margin-top: 20px;
+  line-height: 25px;
 }
+
+
 footer{
+	position:absolute;
+	bottom:0;
+  width:100%;
 	padding:20px;
-	margin-top:20px;
-	color:#FFFFFF;
+	margin: 0;
 	background-color:#2A8285;
 	text-align: center;
+	clear:both;
+}
+
+footer p{
+	color:#ffffff;
+	margin-top: 10px;
 }
