@@ -97,7 +97,6 @@ header a:hover{
   margin-top: 20px;
 	padding-bottom: 170px;
   line-height: 25px;
-	border: 1px black solid;
 }
 
 
@@ -105,7 +104,7 @@ footer{
 	position:relative;
 	bottom:0;
   width:100%;
-  padding-bottom: 22px;
+  padding-bottom: 24px;
 	background-color:#2A8285;
 	text-align: center;
 	clear:both;
@@ -113,5 +112,5 @@ footer{
 
 footer p{
 	color:#ffffff;
-	margin-top: 10px;
+	padding-top: 20px;
 }
