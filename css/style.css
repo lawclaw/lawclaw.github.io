@@ -63,6 +63,7 @@ header #jesus h1{
 header nav{
 	float:right;
 	margin-top:10px;
+	width:100%;
 }
 
 header .highlight, header .current a{
