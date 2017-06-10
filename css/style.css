@@ -1,5 +1,5 @@
 body {
-	font: 15px/1.5 sans-serif;
+	font: 1em/1.5 sans-serif;
 	padding: 0;
 	margin: 0;
 	background-color: #edfcf8;
@@ -32,18 +32,22 @@ header a{
 	color: #FFFFFF;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 1em;
 }
 
 header ul{
 	margin: 0;
-	padding: 0;
+	padding:0;
+}
+
+header nav{
+	float:left;
 }
 
 header li{
 	float: left;
 	display: inline;
-	padding: 0 20px 0 20px;
+	padding: 0 1.250em 0 1.250em;
 }
 
 header #jesus{
@@ -52,12 +56,12 @@ header #jesus{
 
 header #jesus h1{
 	margin:0;
-	font: 40px 'Vibur', cursive;
+	font: 2.5em 'Vibur', cursive;
 }
 
 header nav{
 	float:right;
-	margin-top:10px;
+	margin-top: 0.625em;
 }
 
 header .highlight, header .current a{
@@ -75,7 +79,7 @@ header a:hover{
 
 
 #showcase{
-	min-height: 300px;
+	min-height: 400px;
 	background: url(../img/lol.jpg) no-repeat ;
 	background-size: cover;
 	text-align: center;
@@ -128,4 +132,15 @@ footer{
 footer p{
 	color:#ffffff;
 	margin-top: 10px;
+}
+
+@media only screen and (max-device-width:480px){
+	header #jesus h1{
+		width:100%;
+		margin:0 auto;
+
+	}
+	#fourboxes .box img{
+		width:40%;
+	}
 }
