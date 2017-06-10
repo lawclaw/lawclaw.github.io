@@ -12,6 +12,10 @@ body {
 	overflow: hidden;
 }
 
+* {
+ box-sizing: border-box;
+}
+
 
 
 /* Header */
@@ -23,6 +27,7 @@ header {
 	padding-top: 30px;
 	min-height: 70px;
 	border-bottom: #B83027 3px solid;
+	width: 100%;
 }
 
 
@@ -56,12 +61,21 @@ header #jesus{
 
 header #jesus h1{
 	margin:0;
+<<<<<<< HEAD
 	font: 2.5em 'Vibur', cursive;
+=======
+	font: 2em 'Vibur', cursive;
+>>>>>>> 6b8e295ea61f44348d11896b6d13a92082be71b7
 }
 
 header nav{
 	float:right;
+<<<<<<< HEAD
 	margin-top: 0.625em;
+=======
+	margin-top:10px;
+	width:100%;
+>>>>>>> 6b8e295ea61f44348d11896b6d13a92082be71b7
 }
 
 header .highlight, header .current a{
