@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #C2C2C2;
+}
+
+#toolbar {
+  background-color: #333333;
+  padding: 2.5em;
+}
+
+#toolbar #links a {
+  padding: 1.70em;
+  margin-right: 4em;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5em;
+  color: #AA28AF;
+}
+
+#toolbar #links a:hover {
+  text-decoration: underline;
+  color: #E435EA;
+}
+
+#toolbar #links #name {
+  margin-left: 20em;
+  color: #e09f3eff;
+}
+
+#toolbar #links #name:hover {
+  color: #EB9926;
+  text-decoration: none;
+}
+
+#toolbar #links #home {
+  margin-left: 0.5em;
+}
+
+#main #square {
+  background-color: dimgray;
+  color: black;
+  border-radius: 1em;
+  width: 50em;
+  height: 30em;
+  margin: 5em auto auto auto;
+  padding: 0 2em 0 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 0px 6px 0px #000000;
+  box-shadow: 0px 0px 6px 0px #000000;
+}
+
+#main #square #pf {
+  width: 9em;
+  display: block;
+  margin-right: auto;
+  border-radius: 0.55em;
+}
+
+#main #square h1 {
+  text-align: left;
+  font-size: 2.75em;
+  margin-right: 0.5em;
+}
+
+#main #square p {
+  font-size: 1.25em;
+  margin-left: 1em;
+  text-align: right;
+}
+/*# sourceMappingURL=style.css.map */
