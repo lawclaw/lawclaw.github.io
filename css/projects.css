@@ -44,14 +44,23 @@ a {
   margin-left: 0.5em;
 }
 
-#main #square {
-  background-color: #6C6C6C;
+#toolbar #links #projects {
+  color: #E435EA;
+}
+
+#main {
+  margin-bottom: 5em;
+}
+
+#main .square {
+  background-color: #525252;
   color: black;
   border-radius: 1em;
   width: 50em;
   height: 30em;
   margin: 5em auto auto auto;
   padding: 0 2em 0 2em;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -65,22 +74,22 @@ a {
   box-shadow: 0px 0px 6px 0px #000000;
 }
 
-#main #square:hover {
-  background-color: #525252;
+#main .square:hover {
+  background-color: #6C6C6C;
   color: #e09f3eff;
 }
 
-#main #square:hover h2 {
+#main .square:hover h2 {
   color: #d17b0fff;
 }
 
-#main #square h1 {
+#main .square h1 {
   text-align: left;
   font-size: 3em;
   margin-right: 0em;
 }
 
-#main #square p {
+#main .square p {
   font-size: 1.25em;
   margin-left: 1em;
   text-align: right;

@@ -54,20 +54,25 @@ a {
         #home {
             margin-left: 0.5em;
         }
+        #projects {
+            color:#E435EA;
+        }
     }
     
 }
 
 #main {
-    #square {
+    margin-bottom: 5em;
+    .square {
         //Square
-        background-color: $dim-gray;
+        background-color: $davys-gray;
         color: black;
         border-radius: 1em;
         width: 50em;
         height: 30em;
         margin: 5em auto auto auto;
         padding: 0 2em 0 2em;
+        position: relative;
         
         //Centering
         align-items: center;
@@ -79,7 +84,7 @@ a {
         box-shadow: 0px 0px 6px 0px #000000;
 
         &:hover {
-            background-color: $davys-gray;
+            background-color: $dim-gray ;
             color: $indian-yellow;
             h2 {
                 color:$ochre;
@@ -101,3 +106,4 @@ a {
          
     }
 }
+

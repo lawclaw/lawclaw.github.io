@@ -52,7 +52,9 @@ a {
         }
         #home {
             margin-left: 0.5em;
-            color: #E435EA;
+        }
+        #contact {
+            color:#E435EA;
         }
     }
 }
@@ -60,13 +62,17 @@ a {
 #main {
     #square {
         //Square
+        &:hover {
+            color: $indian-yellow;
+            box-shadow: 0em 0em 1em $jet;
+        }
         background-color: dimgray;
         color: black;
         border-radius: 1em;
         width: 50em;
         height: 30em;
         margin: 5em auto auto auto;
-        padding: 2em;
+        padding: 0 2em 0 2em;
         
         //Centering
         align-items: center;
@@ -76,15 +82,24 @@ a {
         //Shadow
         -webkit-box-shadow: 0px 0px 6px 0px #000000; 
         box-shadow: 0px 0px 6px 0px #000000;
-        
+
+        #pf {
+            width: 9em;
+            display:block;
+            margin-right: auto;
+            border-radius: 0.55em;
+        }
+        h2 {
+            margin-left: 2em;
+        }
         h1 {
             text-align: left;
-            font-size: 4em;
+            font-size: 2.75em;
             margin-right: 0.5em;
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1.25em;
             margin-left: 1em;
             text-align: right;
         }
