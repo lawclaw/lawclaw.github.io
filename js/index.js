@@ -36,7 +36,7 @@ function selection_screen() {
         choice.setAttribute('id', 'choice_' + i);
         
         let banner_image = i + ".jpg";
-        choice.style.backgroundImage = "url(../resources/" + banner_image + ")";
+        choice.style.backgroundImage = "url(../resources/banner_" + banner_image + ")";
         choice.style.backgroundSize = "cover";
         
         choice.style.width = "300px";
