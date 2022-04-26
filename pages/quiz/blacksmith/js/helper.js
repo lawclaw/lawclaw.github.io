@@ -35,9 +35,6 @@ function clear_div(selector) {
 }
 
 function load_hp() {
-    if (getCookie("hp")) {
-        hp = getCookie("hp");
-    } else {
-        hp = 5;
-    }
+  hp = getCookie("hp");
 }
+    

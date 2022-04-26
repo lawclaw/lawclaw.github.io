@@ -34,8 +34,9 @@ function selection_screen() {
 
         choice_wrapper.setAttribute('class', 'choice_wrapper');
         choice.setAttribute('id', 'choice_' + i);
-
-        choice.style.backgroundImage = "url('https://picsum.photos/seed/958/200/600')";
+        
+        let banner_image = i + ".jpg";
+        choice.style.backgroundImage = "url(../resources/" + banner_image + ")";
         choice.style.backgroundSize = "cover";
         
         choice.style.width = "300px";
