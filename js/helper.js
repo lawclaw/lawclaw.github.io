@@ -3,6 +3,15 @@ function add_cookie(key, value) {
     document.cookie = key + "=" + value + ";";
 }
 
+function clearCookies() { //https://www.geeksforgeeks.org/how-to-clear-all-cookies-using-javascript/
+  var cookies = document.cookie.split(';');
+  
+  // Add expiry date to past current date
+  for (var i = 0; i < cookies.length; i++)
+      document.cookie = cookies[i] + "=;expires="
+      + new Date(0).toUTCString();
+}
+
 function getCookie(cname) { //https://www.w3schools.com/js/js_cookies.asp
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);

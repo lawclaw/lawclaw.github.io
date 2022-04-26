@@ -15,7 +15,7 @@ window.onload = () => {
     load_hp();
     draw_hp(hp);
     choices_onclick();
-    questions = retrieve_multiple_choice_questions("blacksmith");  
+    questions = retrieve_multiple_choice_questions(getCookie('choice'));  
     display_multiple_choice_question();
 }
 

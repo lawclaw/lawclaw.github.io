@@ -15,7 +15,7 @@ window.onload = () => {
     load_hp();
     draw_hp(hp);
     set_event_listener();
-    questions = retrieve_written_questions("blacksmith");    
+    questions = retrieve_written_questions(getCookie('choice'));    
     display_written_question();
 }
 
@@ -39,7 +39,7 @@ function draw_hp(hp) {
 // Displays the next question
 function display_written_question() {
     if (questions[current_question] === undefined) {    // End of multiple choice questions
-        alert("end of questions");
+        window.location.href = "../../victoryscreens/index.html"
         return;
     }
     let main_div = document.querySelector(main_div_selector);

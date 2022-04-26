@@ -17,13 +17,8 @@ function selection_screen() {
     var main_div = document.querySelector(main_div_selector);
     main_div.style.padding = "3em 0";
 
-    // Add H1
-    var title = document.createElement('h1');
-    var title_text = document.createTextNode('Choose a path');
-
-    // Append to main
-    title.appendChild(title_text);
-    main_div.appendChild(title);
+    // Add header
+    add_h1(getCookie('name') + ", choose your path")
 
     // Create choice container
     var choices_container = document.createElement('div');
@@ -49,6 +44,7 @@ function selection_screen() {
         choice.style.cursor = "pointer";
 
         choice.onclick = (choice) => {
+            add_cookie('hp', 5);
             switch (choice.target.id) {
                 case 'choice_0':
                     add_cookie("choice", "blacksmith");
@@ -57,11 +53,11 @@ function selection_screen() {
                     break;
                 case 'choice_1':
                     add_cookie("choice", "academic");
-                    window.location.href="../pages/quiz/academic/index.html";
+                    window.location.href="../pages/quiz/blacksmith/index.html";
                     break;
                 case 'choice_2':
                     add_cookie("choice", "soldier");
-                    window.location.href="../pages/quiz/soldier/index.html";
+                    window.location.href="../pages/quiz/blacksmith/index.html";
                     break;
             }
         };
@@ -114,10 +110,6 @@ function name_screen() {
     main_div.appendChild(form);
 
     add_submit_button(main_div_selector);
-
-
-
-
 }
 
 function add_h1(string) {
@@ -152,6 +144,7 @@ function add_submit_button() {
 
 function selection_onclick(event) {
     if (document.querySelector('.input_field')) {
+        clearCookies();
         add_cookie("name", document.querySelector('.input_field').value);
         clear_div(main_div_selector);
         selection_screen(main_div_selector);

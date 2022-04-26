@@ -38,9 +38,80 @@ function retrieve_multiple_choice_questions(career) {
                 )
             );
             break;
-        case "career2":
+        case "academic":
+            questions.push(
+                new MultipleChoiceQuestion(
+                    "What is the process of restructuring existing computer code called?",
+                    "You are on the last question of your magic test. <br> The last step before you can become an academic.",
+                    [
+                        "Refactoring",
+                        "Restructuring",
+                        "Reforming",
+                        "Reiterating"
+                    ],
+                    0
+                ),
+                new MultipleChoiceQuestion(
+                    "Which one is a modelling language",
+                    "Finished with school, you are now given your first job to construct a building. <br> But what was the tool you used called?",
+                    [
+                        "UNL",
+                        "UBL",
+                        "JBL",
+                        "UML"
+                    ],
+                    3
+                ),
+                new MultipleChoiceQuestion(
+                    "Select the correct definition of 'code smell'",
+                    "After drawing up schemas and calculating the costs of construction, you realize that there is something wrong with the ground",
+                    [
+                        "Dirty keyboard",
+                        "Bug found in system",
+                        "Underlying code problem",
+                        "Messy code"
+                    ],
+                    2
+                )
+            );
+            
             break;
-        case "career3":
+        case "soldier":
+            questions.push(
+                new MultipleChoiceQuestion(
+                    "What unit can be used to describe time complexity?",
+                    "The enlistment time slot is today, but what time?",
+                    [
+                        "Big O",
+                        "Big B",
+                        "Big T",
+                        "Big N"
+                    ],
+                    0
+                ),
+                new MultipleChoiceQuestion(
+                    "What value does Continuous Integration provide?",
+                    "After doing some tests, you've been placed into Unit CI <br> But what was your main goal?",
+                    [
+                        "Increases risk",
+                        "Efficient integration",
+                        "More repetitive tasks",
+                        "Ability to create software at any point"
+                    ],
+                    3
+                ),
+                new MultipleChoiceQuestion(
+                    "What is Information Visualization?",
+                    "As the new member, you've been given guard duty.",
+                    [
+                        "Displaying information using paintings to boost brain power",
+                        "Study of visual representations of abstract data to reinforce human cognition",
+                        "Compiling information into a tangible and understandable format",
+                        "Visualizing data in a GUI"
+                    ],
+                    1
+                )
+            )
             break;
     }
 
@@ -64,9 +135,33 @@ function retrieve_written_questions(career) {
                 )
             );
             break;
-        case "career2":
+        case "academic":
+            questions.push(
+                new WrittenQuestion(
+                    "What is the expanded form of HTML?",
+                    "After further investigation, you realize that a group of goblins are living under the ground. <br> They speak some language but what was it called again?",
+                    "HyperText Markup Language"
+                ),
+                new WrittenQuestion(
+                    "Which datat structure is based upon the contiguous allocation of memory?",
+                    "You begin negotiation with the goblins, however they demand new living spaces.",
+                    "Array"
+                )
+            );
             break;
-        case "career3":
+        case "soldier":
+            questions.push(
+                new WrittenQuestion(
+                    "'Querying a service to check properties', is an example of what type of monitoring?",
+                    "During your shift, you've been tasked to test that all lights work.",
+                    "Blackbox monitoring"
+                ),
+                new WrittenQuestion(
+                    "In computer security users make up one role, what is the other role?",
+                    "After checking multiple rooms you end up in a room with a red and blue switch",
+                    "Hackers"
+                ),
+            )
             break;
     }
 
