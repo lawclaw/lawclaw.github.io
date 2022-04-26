@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Web Quest²</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="resources/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet"> 
-  </head>
-  <body>
-	<script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="resources/logo.png">
+            <a href="./index.html">Home</a>
+            <a href="pages/about_us/index.html">About us</a>
+        </nav>
+    </header>
 
-    <section id="toolbar">
-            <div id="links">
-                <a id="home" href="index.html"> Home</a>
-                <a id="projects" href="html/projects.html"> Projects</a>
-                <a id="contact" href="html/contact.html"> Contact</a>
-                <a id="name" href="index.html"> Vinh Phat Tu</a>
-            </div>
-    </section>
 
-    <section id="main">
-        <div id="square">
-            <h1>About me</h1>        
-            <p>
-            Computing undergraduate with strong learning capabilities. <br> <br>
-            My skills allow me to quickly adapt to new situations and resolve problems with efficiency. <br> <br>
-            In a team, I am the hard-working and dedicated member.
-            </p>
-        </div>
-    </section>
+    <div class="main">
+        <h1>Web Quest²</h1>
+        <a id="start_button">Begin adventure</a>
+    </div>
 
-  </body>
+    <div class="article_main">
+        <article>
+            <h2>Experience studying through narration</h2>
+            <div class="text" >
+                <h3>Welcome to Web Quest, a game for computer science students.</h3>
+                <p>In the setting of a fantasy world, you must make decisions which will the course of your adventure and eventually, the fate of your life.
+                </p>
+             </div>
+        </article>
+    </div>
+
+    <footer>
+        Web Quest &copy; 2022
+    </footer>
+</body>
+<script src="js/helper.js"></script>
+<script src="js/index.js"></script> 
 </html>

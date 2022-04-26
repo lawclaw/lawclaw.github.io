@@ -1,0 +1,146 @@
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container-basic-row, .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.flex-container-basic-col, body, .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.yellow-button, .navbar a {
+  background-color: #ecdcab;
+  color: inherit;
+}
+
+.yellow-button:hover, .navbar a:hover {
+  background-color: #abd27f;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+body {
+  background-color: #7783a3;
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar img {
+  width: 75px;
+  display: inline-block;
+}
+
+.navbar a {
+  text-decoration: underline;
+  padding: 0.5em;
+  border-radius: 3px;
+  margin: 0.5em;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../../../resources/genshin.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../resources/genshin.jpg");
+  background-size: cover;
+}
+
+.main article {
+  background-color: #7783a3;
+  border-radius: 0.5em;
+  padding: 2em;
+  text-align: center;
+}
+
+.main article h1 {
+  text-align: center;
+  margin: 0 0 0.5em 0;
+  color: #abd27f;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  text-shadow: 10px 10px #454872;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  font-size: 8em;
+}
+
+.main article h1:hover {
+  color: #454872;
+  text-shadow: 10px 10px #abd27f;
+}
+
+.text {
+  border-radius: 0.5em;
+  background-color: #ecdcab;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+footer {
+  padding: 1em;
+  background-color: #454872;
+  text-align: center;
+}
+
+@media (max-width: 696px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .navbar img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .navbar a {
+    text-align: center;
+  }
+  .main h1 {
+    margin: 0 0 0.5em 0;
+  }
+  .main a {
+    margin: 0 0 1em 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */
