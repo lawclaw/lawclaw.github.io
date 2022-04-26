@@ -28,7 +28,7 @@ function draw_hp(hp) {
     heart_container.setAttribute('class', 'heart_container');
     for (let i = 0; i < hp; i++) {
         let img  = document.createElement('img');
-        img.setAttribute("src", "../resources/heart.png");
+        img.setAttribute("src", "../../../resources/heart.png");
         img.setAttribute("object-fit", 'contain');
         heart_container.appendChild(img);
     }

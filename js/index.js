@@ -49,23 +49,23 @@ function selection_screen() {
             switch (choice.target.id) {
                 case 'choice_0':
                     add_cookie("choice", "blacksmith");
-                    window.location.href="pages/quiz/blacksmith/index.html";
+                    window.location.href="pages/quiz/multiple_choice/index.html";
                     add_submit_button();
                     break;
                 case 'choice_1':
                     add_cookie("choice", "academic");
-                    window.location.href="../pages/quiz/blacksmith/index.html";
+                    window.location.href="../pages/quiz/multiple_choice/index.html";
                     break;
                 case 'choice_2':
                     add_cookie("choice", "soldier");
-                    window.location.href="../pages/quiz/blacksmith/index.html";
+                    window.location.href="../pages/quiz/multiple_choice/index.html";
                     break;
             }
         };
 
         choice_wrapper.style.clipPath = "polygon(100% 0, 0 0, 0 90%, 50% 100%, 100% 90%)"; //https://bennettfeely.com/clippy/
         choice_wrapper.style.filter = "drop-shadow(12px 16px 5px rgba(0,0,0,0.5))";
-        
+
         choice_wrapper.appendChild(choice);
         choices_container.appendChild(choice_wrapper)
 

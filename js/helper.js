@@ -3,6 +3,11 @@ function add_cookie(key, value) {
     document.cookie = key + "=" + value + ";";
 }
 
+function clear_field(selector) {
+  const field = document.querySelector(selector);
+  field.value = "";
+}
+
 function clearCookies() { //https://www.geeksforgeeks.org/how-to-clear-all-cookies-using-javascript/
   var cookies = document.cookie.split(';');
   
