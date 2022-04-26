@@ -6,6 +6,11 @@ function add_cookie(key, value) {
 // TODO: function to clear all cookies
 // function clearCookies() {
 
+function clear_field(selector) {
+  let field = document.querySelector(selector);
+  field.value = "";
+}
+
 function getCookie(cname) { //https://www.w3schools.com/js/js_cookies.asp
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
