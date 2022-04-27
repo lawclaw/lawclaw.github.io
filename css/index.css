@@ -1,31 +1,29 @@
-/* SCSS HEX */
-/* SCSS HEX */
 .navbar {
   display: flex;
   flex-flow: row wrap;
 }
 
-body, .article_main, .main {
+body, .main, .article_main {
   display: flex;
   flex-flow: column nowrap;
 }
 
-.navbar a, .article_main a, .main a, .article_main #start_button, .main #start_button {
+.navbar a, .main a, .article_main a, .main #start_button, .article_main #start_button {
   background-color: #ecdcabff;
   color: inherit;
   cursor: pointer;
 }
-.navbar a:hover, .article_main a:hover, .main a:hover, .article_main #start_button:hover, .main #start_button:hover {
+.navbar a:hover, .main a:hover, .article_main a:hover, .main #start_button:hover, .article_main #start_button:hover {
   background-color: #abd27fff;
   transition: all 0.2s ease-in;
 }
 
-.article_main, .main {
+.main, .article_main {
   justify-content: center;
   align-items: center;
   height: 94vh;
 }
-.article_main h1, .main h1 {
+.main h1, .article_main h1 {
   text-align: center;
   margin: 0.5em 0;
   color: #abd27fff;
@@ -33,21 +31,21 @@ body, .article_main, .main {
   text-shadow: 10px 10px #454872ff;
   font-size: 8em;
 }
-.article_main h1:hover, .main h1:hover {
+.main h1:hover, .article_main h1:hover {
   text-shadow: 10px 10px #abd27fff;
   color: #7783a3ff;
   transition: all 0.5s ease;
 }
-.article_main a, .main a, .article_main #start_button, .main #start_button {
+.main a, .article_main a, .main #start_button, .article_main #start_button {
   text-decoration: none;
   padding: 1em;
   border-radius: 3px;
   font-size: x-large;
 }
-.article_main #start_button, .main #start_button {
+.main #start_button, .article_main #start_button {
   transition: font-size 300ms;
 }
-.article_main #start_button:hover, .main #start_button:hover {
+.main #start_button:hover, .article_main #start_button:hover {
   font-size: xx-large;
   transition: font-size 300ms;
 }
@@ -71,7 +69,7 @@ body {
   width: 75px;
   display: inline-block;
 }
-.navbar a, .navbar .article_main #start_button, .navbar .main #start_button, .article_main .navbar #start_button, .main .navbar #start_button {
+.navbar a {
   text-decoration: underline;
   padding: 0.5em;
   border-radius: 3px;
@@ -126,14 +124,14 @@ footer {
   .navbar img {
     align-self: center;
   }
-  .navbar a, .navbar .main #start_button, .main .navbar #start_button, .navbar .article_main #start_button, .article_main .navbar #start_button {
+  .navbar a {
     text-align: center;
   }
 
   .main h1 {
     margin: 0 0 0.5em 0;
   }
-  .main a, .main #start_button {
+  .main a {
     margin: 0 0 1em 0;
   }
 }
