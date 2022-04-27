@@ -140,6 +140,18 @@ body {
 
     }
 
+    .input_field {
+        width: 20vw;
+        padding: 0.5em;
+    }
+
+    a {
+        @extend .yellow-button;
+        padding: 0.5em;
+        border-radius: 3px;
+        margin: 0.5em;
+    }    
+
 
 }
 

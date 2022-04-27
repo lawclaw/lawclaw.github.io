@@ -36,13 +36,13 @@
           justify-content: center;
 }
 
-.yellow-button, .navbar a, .main .choices a {
+.yellow-button, .navbar a, .main .choices a, .main a {
   background-color: #ecdcab;
   color: inherit;
   cursor: pointer;
 }
 
-.yellow-button:hover, .navbar a:hover, .main .choices a:hover {
+.yellow-button:hover, .navbar a:hover, .main a:hover {
   background-color: #abd27f;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -129,6 +129,17 @@ body {
   font-size: large;
   -webkit-transition: font-size 300ms;
   transition: font-size 300ms;
+}
+
+.main .input_field {
+  width: 20vw;
+  padding: 0.5em;
+}
+
+.main a {
+  padding: 0.5em;
+  border-radius: 3px;
+  margin: 0.5em;
 }
 
 @media (max-width: 696px) {

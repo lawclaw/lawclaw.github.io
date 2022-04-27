@@ -1,3 +1,4 @@
+// Constants
 const languidLavender = '#d8cdd5ff';
 const shadowBlue = '#7783a3ff';
 const purpleNavy = '#454872ff';
@@ -6,25 +7,33 @@ const pistachio = '#abd27fff';
 
 const main_div_selector = ".main";
 
+// Quiz variables
 let questions = [];
-let hp;
+let hp = 5;
 let correct_answer = 1;
 let current_question = 0;
 
+/**
+ * Executed whenever the page is loaded
+ */
 window.onload = () => {
-    load_hp();
-    draw_hp(hp);
-    choices_onclick();
+    display_hp(hp);
+    set_choices_onclick();
     questions = retrieve_multiple_choice_questions(getCookie('choice'));  
     display_multiple_choice_question();
 }
 
-function draw_hp(hp) {
+/**
+ * Adds n number of hearts to navbar
+ * @param {number} hp 
+ */
+function display_hp(hp) {
     let navbar = document.querySelector('.navbar');
     let heart_container = document.querySelector(".heart_container");
     if (!document.querySelector(".heart_container")) {
         heart_container = document.createElement('div');
     }
+    
     heart_container.setAttribute('class', 'heart_container');
     for (let i = 0; i < hp; i++) {
         let img  = document.createElement('img');
@@ -33,10 +42,12 @@ function draw_hp(hp) {
         heart_container.appendChild(img);
     }
     navbar.appendChild(heart_container);
-
 }
 
-function choices_onclick() {
+/**
+ * Set .choices onclick event listener
+ */
+function set_choices_onclick() {
     let divs = document.querySelectorAll('.choice');    //https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/
     [].forEach.call(divs, (div, index) => {
         div.onclick = () => {
@@ -45,29 +56,30 @@ function choices_onclick() {
                 current_question++;
                 display_multiple_choice_question();
             } else {
+                original_bg = div.style.backgroundColor;
+                div.style.backgroundColor = "#fc5361";
+                setTimeout(() => { div.style.backgroundColor = original_bg; }, 300);
                 hp--;
                 if (hp <= 0) {
                     window.location.href = "../deathscreens/index.html";
                 }
                 clear_div('.heart_container');
-                draw_hp(hp);
+                display_hp(hp);
             }
         }
     });
 }
 
 
-
-// Displays the next question
+/** 
+ * Displays the next multiple choice question
+ */
 function display_multiple_choice_question() {
-    if (questions[current_question] === undefined) {    // End of multiple choice questions
-        add_cookie("hp", hp);
-        window.location.href = "written_questions/index.html";
+    if (questions[current_question] === undefined) {    // If multiple choice questions are finished
+        load_written_questions();
+        return;
     }
     let main_div = document.querySelector(main_div_selector);
-    let header = main_div.children[0];
-
-    header.textContent = "Chapter " + (current_question + 1);
 
     let article = main_div.children[1];
     let questionHeader = article.querySelector("h2");
@@ -82,7 +94,4 @@ function display_multiple_choice_question() {
     }
 
     correct_answer = questions[current_question].correct_answer;
-
 }
-
-

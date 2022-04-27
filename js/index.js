@@ -1,3 +1,4 @@
+// Constants
 const languidLavender = '#d8cdd5ff';
 const shadowBlue = '#7783a3ff';
 const purpleNavy = '#454872ff';
@@ -45,7 +46,6 @@ function selection_screen() {
         choice.style.cursor = "pointer";
 
         choice.onclick = (choice) => {
-            add_cookie('hp', 5);
             switch (choice.target.id) {
                 case 'choice_0':
                     add_cookie("choice", "blacksmith");

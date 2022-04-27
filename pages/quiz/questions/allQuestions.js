@@ -9,8 +9,8 @@ function retrieve_multiple_choice_questions(career) {
                     [
                         "Development, Operations and Solutions",
                         "Flow, Feedback and Continuous Experimentation and Learning",
-                        "Ugandan Knuckles",
-                        "Conway's Game of Life"
+                        "Water, Earth, Fire, Air",
+                        "Presentation, Business and Data"
                     ],
                     1
                 ),

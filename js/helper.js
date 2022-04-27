@@ -1,6 +1,6 @@
 // Helper function: Clears selected div of content
 function add_cookie(key, value) {
-    document.cookie = key + "=" + value + ";";
+    document.cookie = key + "=" + value + ";" + "SameSite=Lax; Secure";
 }
 
 function clear_field(selector) {
@@ -9,10 +9,10 @@ function clear_field(selector) {
 }
 
 function clearCookies() { //https://www.geeksforgeeks.org/how-to-clear-all-cookies-using-javascript/
-  var cookies = document.cookie.split(';');
+  let cookies = document.cookie.split(';');
   
   // Add expiry date to past current date
-  for (var i = 0; i < cookies.length; i++)
+  for (let i = 0; i < cookies.length; i++)
       document.cookie = cookies[i] + "=;expires="
       + new Date(0).toUTCString();
 }
