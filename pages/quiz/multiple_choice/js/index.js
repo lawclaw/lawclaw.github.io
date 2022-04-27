@@ -10,8 +10,8 @@ const main_div_selector = ".main";
 // Quiz variables
 let questions = [];
 let hp = 5;
-let correct_answer = 1;
-let current_question = 0;
+let correct_answer = -1;
+let current_question_number = 0;
 
 /**
  * Executed whenever the page is loaded
@@ -53,7 +53,7 @@ function set_choices_onclick() {
         div.onclick = () => {
             foundCorrectAnswer = index == correct_answer;
             if (foundCorrectAnswer) {
-                current_question++;
+                current_question_number++;
                 display_multiple_choice_question();
             } else {
                 original_bg = div.style.backgroundColor;
@@ -75,7 +75,7 @@ function set_choices_onclick() {
  * Displays the next multiple choice question
  */
 function display_multiple_choice_question() {
-    if (questions[current_question] === undefined) {    // If multiple choice questions are finished
+    if (questions[current_question_number] === undefined) {    // If multiple choice questions are finished
         load_written_questions();
         return;
     }
@@ -83,15 +83,15 @@ function display_multiple_choice_question() {
 
     let article = main_div.children[1];
     let questionHeader = article.querySelector("h2");
-    questionHeader.textContent = "Question " + (current_question + 1) + ": " + questions[current_question].question;
+    questionHeader.textContent = "Question " + (current_question_number + 1) + ": " + questions[current_question_number].question;
     let contextPara = article.querySelector("p");
-    contextPara.innerHTML = questions[current_question].context;
+    contextPara.innerHTML = questions[current_question_number].context;
 
     let answers = document.querySelector(".choices");
     for (let i = 0; i < 4; i++) {
         let aTag = answers.children[i];
-        aTag.innerHTML = questions[current_question].answers[i];
+        aTag.innerHTML = questions[current_question_number].answers[i];
     }
 
-    correct_answer = questions[current_question].correct_answer;
+    correct_answer = questions[current_question_number].correct_answer;
 }

@@ -143,7 +143,7 @@ function retrieve_written_questions(career) {
                     "HyperText Markup Language"
                 ),
                 new WrittenQuestion(
-                    "Which datat structure is based upon the contiguous allocation of memory?",
+                    "Which data structure is based upon the contiguous allocation of memory?",
                     "You begin negotiation with the goblins, however they demand new living spaces.",
                     "Array"
                 )

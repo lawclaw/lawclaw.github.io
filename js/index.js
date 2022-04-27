@@ -7,13 +7,20 @@ const pistachio = '#abd27fff';
 
 const main_div_selector = ".main";
 
-
+/**
+ * Onclick for #start_button
+ */
 document.querySelector("#start_button").onclick = () => {
     clear_div(main_div_selector);
-    name_screen(main_div_selector);
+    generate_name_screen(main_div_selector);
 }
 
-function selection_screen() {
+/**
+ * Generate selection screen
+ */
+function generate_selection_screen() {
+    clear_div(main_div_selector);
+
     // Retrieve selector of main 
     var main_div = document.querySelector(main_div_selector);
     main_div.style.padding = "3em 0";
@@ -75,7 +82,10 @@ function selection_screen() {
     main_div.appendChild(choices_container)
 }
 
-function name_screen() {
+/**
+ * Generate name screen
+ */
+function generate_name_screen() {
     let main_div = document.querySelector(main_div_selector);
 
     add_h1('What is your name?');
@@ -113,18 +123,28 @@ function name_screen() {
     add_submit_button(main_div_selector);
 }
 
-function add_h1(string) {
+
+// Helper functions 
+
+/**
+ * Generates h1 to .main
+ * @param {String} text_content 
+ */
+function add_h1(text_content) {
     let main_div = document.querySelector(main_div_selector);
 
     // Create H1
     let title = document.createElement('h1');
-    let title_text = document.createTextNode(string);
+    let title_text = document.createTextNode(text_content);
 
     // Append to main
     title.appendChild(title_text);
     main_div.appendChild(title);
 }
 
+/**
+ * Generates submit button to .main
+ */
 function add_submit_button() {
         // Add button
         let main_div = document.querySelector(main_div_selector);
@@ -143,12 +163,15 @@ function add_submit_button() {
         main_div.appendChild(submit);
 }
 
+/**
+ * Onclick for .input_field
+ * @param {event} event 
+ */
 function selection_onclick(event) {
     if (document.querySelector('.input_field')) {
         clearCookies();
         add_cookie("name", document.querySelector('.input_field').value);
-        clear_div(main_div_selector);
-        selection_screen(main_div_selector);
+        generate_selection_screen(main_div_selector);
     } else {
         event.preventDefault();
     }

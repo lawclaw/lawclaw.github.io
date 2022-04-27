@@ -6,7 +6,7 @@ function load_written_questions() {
     set_submit_button_onclick();
     set_field_keypress();
     questions = retrieve_written_questions(getCookie('choice'));
-    current_question = 0;
+    current_question_number = 0;
     display_written_question();
 }
 
@@ -14,7 +14,7 @@ function load_written_questions() {
  * Displays the next written question
  */
 function display_written_question() {
-    if (questions[current_question] === undefined) {    // If written questions are finished
+    if (questions[current_question_number] === undefined) {    // If written questions are finished
         window.location.href = "../victoryscreens/index.html"
     }
 
@@ -22,11 +22,11 @@ function display_written_question() {
 
     let article = main_div.children[1];
     let questionHeader = article.querySelector("h2");
-    questionHeader.textContent = "Question " + (current_question + 1) + ": " + questions[current_question].question;
+    questionHeader.textContent = "Question " + (current_question_number + 1) + ": " + questions[current_question_number].question;
     let contextPara = article.querySelector("p");
-    contextPara.innerHTML = questions[current_question].context;
+    contextPara.innerHTML = questions[current_question_number].context;
 
-    correct_answer = questions[current_question].correct_answer;
+    correct_answer = questions[current_question_number].correct_answer;
 }
 
 
@@ -88,7 +88,7 @@ function set_field_keypress() {
             
             if (event.target.value == correct_answer) // Answer checking
             {
-                current_question++;
+                current_question_number++;
                 display_written_question();
             } else {
                 hp--;
@@ -96,7 +96,7 @@ function set_field_keypress() {
                     window.location.href = "../deathscreens/index.html";
                 }
                 clear_div('.heart_container');
-                draw_hp(hp);
+                display_hp(hp);
             }
             
             event.preventDefault();
