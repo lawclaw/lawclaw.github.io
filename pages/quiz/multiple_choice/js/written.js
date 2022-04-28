@@ -15,7 +15,8 @@ function load_written_questions() {
  */
 function display_written_question() {
     if (questions[current_question_number] === undefined) {    // If written questions are finished
-        window.location.href = "../victoryscreens/index.html"
+        window.location.href = "../victoryscreens/index.html";
+        return;
     }
 
     let main_div = document.querySelector(main_div_selector);
