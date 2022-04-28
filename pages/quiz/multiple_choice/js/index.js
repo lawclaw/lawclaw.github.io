@@ -12,6 +12,7 @@ let questions = [];
 let hp = 5;
 let correct_answer = -1;
 let current_question_number = 0;
+let total_questions_answered = 0;
 
 /**
  * Executed whenever the page is loaded
@@ -54,6 +55,7 @@ function set_choices_onclick() {
             foundCorrectAnswer = index == correct_answer;
             if (foundCorrectAnswer) {
                 current_question_number++;
+                total_questions_answered++;
                 display_multiple_choice_question();
             } else {
                 original_bg = div.style.backgroundColor;
@@ -61,6 +63,7 @@ function set_choices_onclick() {
                 setTimeout(() => { div.style.backgroundColor = original_bg; }, 300);
                 hp--;
                 if (hp <= 0) {
+                    add_cookie("n_questions", total_questions_answered);
                     window.location.href = "../deathscreens/index.html";
                 }
                 clear_div('.heart_container');

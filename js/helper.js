@@ -1,6 +1,6 @@
 // Helper function: Clears selected div of content
 function add_cookie(key, value) {
-    document.cookie = key + "=" + value + ";" + "SameSite=Lax; Secure";
+    document.cookie = key + "=" + value + "; SameSite=Lax; Secure" + ";Path=/";
 }
 
 function clear_field(selector) {

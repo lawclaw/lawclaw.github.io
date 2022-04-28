@@ -15,6 +15,8 @@ function load_written_questions() {
  */
 function display_written_question() {
     if (questions[current_question_number] === undefined) {    // If written questions are finished
+        add_cookie("hp", hp);
+        add_cookie("n_questions", total_questions_answered);
         window.location.href = "../victoryscreens/index.html";
         return;
     }
@@ -79,10 +81,12 @@ function set_submit_button_onclick() {
         if (field.value == correct_answer) // Answer checking
         {
             current_question_number++;
+            total_questions_answered++;
             display_written_question();
         } else {
             hp--;
             if (hp <= 0) {
+                add_cookie("n_questions", total_questions_answered);
                 window.location.href = "../deathscreens/index.html";
             }
             clear_div('.heart_container');
@@ -108,10 +112,12 @@ function set_field_keypress() {
             if (event.target.value == correct_answer) // Answer checking
             {
                 current_question_number++;
+                total_questions_answered++;
                 display_written_question();
             } else {
                 hp--;
                 if (hp <= 0) {
+                    add_cookie("n_questions", total_questions_answered);
                     window.location.href = "../deathscreens/index.html";
                 }
                 clear_div('.heart_container');
