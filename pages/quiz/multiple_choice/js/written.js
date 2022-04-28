@@ -69,8 +69,26 @@ function generate_written_question_ui() {
  */
 function set_submit_button_onclick() {
     const submit_button = document.querySelector("#submit_button");
-    submit_button.addEventListener('click', (event) => {
-        answer_button_onclick(event);
+    submit_button.addEventListener('click', () => {
+        const field = document.querySelector(".input_field");
+        if (field.value == null || field.value == "") // Null or empty input
+        {
+            return;
+        }
+        
+        if (field.value == correct_answer) // Answer checking
+        {
+            current_question_number++;
+            display_written_question();
+        } else {
+            hp--;
+            if (hp <= 0) {
+                window.location.href = "../deathscreens/index.html";
+            }
+            clear_div('.heart_container');
+            display_hp(hp);
+        }
+        clear_field(".input_field");      
     });
 }
 

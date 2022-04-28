@@ -134,5 +134,16 @@ footer {
   .main a {
     margin: 0 0 1em 0;
   }
+
+  .choices {
+    flex-flow: column wrap;
+    align-items: stretch;
+  }
+  .choices img {
+    align-self: center;
+  }
+  .choices a {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=index.css.map */

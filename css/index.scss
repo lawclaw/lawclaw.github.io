@@ -100,4 +100,15 @@ footer {
             margin: 0 0 1em 0;
         }
     }
+
+    .choices {
+        flex-flow: column wrap;
+        align-items: stretch;   
+        img {
+            align-self: center;
+        }
+        a {
+            text-align: center;
+        }
+    }
 }
