@@ -1,2 +1,4 @@
 *.css.map
 *.min.css
+
+node_modules
